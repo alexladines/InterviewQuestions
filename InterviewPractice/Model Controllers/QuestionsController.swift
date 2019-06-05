@@ -8,8 +8,8 @@
 
 import Foundation
 
-class QuestionController {
-    private(set) var questions: [Question] = [
+class QuestionsController {
+    var questions: [Question] = [
         Question(question: "What is let and var in swift?",
                  answer: """
 `var` keyword is used to declare a variable`let` keyword is used to declare a constant variable Variables created with these are  either values or references/pointers.
