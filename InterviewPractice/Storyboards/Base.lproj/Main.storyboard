@@ -15,18 +15,19 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ac3-1x-ePh" customClass="QuestionsTabViewController" customModule="InterviewPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jkH-un-16z">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9Fh-L5-Hkm" kind="relationship" relationship="viewControllers" id="W0K-aQ-EYp"/>
+                        <segue destination="plp-Iv-fML" kind="relationship" relationship="viewControllers" id="W0K-aQ-EYp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ra-wz-nMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-110.14492753623189" y="142.63392857142856"/>
         </scene>
-        <!--iOS-->
+        <!--Questions Table View Controller-->
         <scene sceneID="6G9-IE-ecN">
             <objects>
                 <tableViewController id="9Fh-L5-Hkm" customClass="QuestionsTableViewController" customModule="InterviewPractice" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,11 +59,30 @@
                             <outlet property="delegate" destination="9Fh-L5-Hkm" id="Jqv-aK-owx"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="iOS" id="6fC-Zc-i2N"/>
+                    <navigationItem key="navigationItem" id="hdN-CZ-rOK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6o-fc-ifz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="143"/>
+            <point key="canvasLocation" x="1697.1014492753625" y="142.63392857142856"/>
+        </scene>
+        <!--iOS-->
+        <scene sceneID="tp7-4K-NpA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="plp-Iv-fML" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="iOS" id="6fC-Zc-i2N"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bwi-BW-gc8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9Fh-L5-Hkm" kind="relationship" relationship="rootViewController" id="suF-Ju-h06"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6JB-u5-Xyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="786.95652173913049" y="142.63392857142856"/>
         </scene>
     </scenes>
 </document>

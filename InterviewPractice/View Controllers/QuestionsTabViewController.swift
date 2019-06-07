@@ -10,7 +10,7 @@ import UIKit
 
 //To be shared across different tabs
 protocol QuestionsPresenter: AnyObject {
-    var questionsController: QuestionsController! { set get }
+    var questionsController: QuestionsController? { set get }
 }
 
 class QuestionsTabViewController: UITabBarController {
@@ -22,11 +22,19 @@ class QuestionsTabViewController: UITabBarController {
         // Pass the questionsController to child view controllers
         // i.e. : share data between all of the managed screens
 
-        for childViewController in children {
-            if let childViewController = childViewController as? QuestionsPresenter {
-                childViewController.questionsController = questionsController
-            }
-        }
+//        for childViewController in children {
+//            if let childViewController = childViewController as? QuestionsPresenter {
+//                childViewController.questionsController = questionsController
+//            }
+//        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as! UINavigationController
+
+        let questionsTVC = navigationController.topViewController as! QuestionsTableViewController
+        questionsTVC.questionsController = questionsController
+
     }
 
 
